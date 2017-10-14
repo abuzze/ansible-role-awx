@@ -1,6 +1,6 @@
 # Ansible Role: AWX (open source Ansible Tower)
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-awx.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-awx)
+[![Build Status](https://travis-ci.org/abuzze/ansible-role-awx.svg?branch=master)](https://travis-ci.org/abuzze/ansible-role-awx)
 
 Installs and configures [AWX](https://github.com/ansible/awx), the open source version of [Ansible Tower](https://www.ansible.com/tower).
 
@@ -33,6 +33,11 @@ Variables to control what version of AWX is checked out and installed.
     awx_run_install_playbook: yes
 
 By default, this role will run the installation playbook included with AWX (which builds a set of containers and runs them). You can disable the playbook run by setting this variable to `no`.
+
+Variables to modify the installation.
+
+    awx_secret_key: tempsecretkey
+    postgres_data_dir: /opt/awx/pgdocker
 
 ## Dependencies
 
